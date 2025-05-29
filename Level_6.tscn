@@ -1,0 +1,744 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://TileBlue1.tres" type="TileSet" id=1]
+[ext_resource path="res://BG Layers Blue/bg1.2.png" type="Texture" id=2]
+[ext_resource path="res://BG Layers Blue/bg2.png" type="Texture" id=3]
+[ext_resource path="res://Colll.tres" type="TileSet" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pause/Pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://BG Layers Blue/bg3.png" type="Texture" id=7]
+[ext_resource path="res://Healt/Health.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Level_6.gd" type="Script" id=10]
+[ext_resource path="res://Retina/pyramid.png" type="Texture" id=11]
+[ext_resource path="res://EndLevel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Retina/treePineBlue.png" type="Texture" id=13]
+[ext_resource path="res://Thorns/Thorn_x3_left.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Zombie.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Retina/houseAlt1.png" type="Texture" id=16]
+[ext_resource path="res://Retina/house1.png" type="Texture" id=17]
+[ext_resource path="res://Thorns/Thorn_x5.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Thorns/Thorn_x3.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/TombStone (2).png" type="Texture" id=20]
+[ext_resource path="res://Objects/TombStone (1).png" type="Texture" id=21]
+[ext_resource path="res://Tiles/Bone (4).png" type="Texture" id=22]
+[ext_resource path="res://Tiles/Bone (2).png" type="Texture" id=23]
+[ext_resource path="res://Tiles/Bone (1).png" type="Texture" id=24]
+[ext_resource path="res://Tiles/Bone (3).png" type="Texture" id=25]
+[ext_resource path="res://TileSand.tres" type="TileSet" id=26]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=27]
+
+[node name="Level_6" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+
+[node name="TileMapBlue" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, 327678, 1, 0, 393214, 1, 0, 458750, 1, 0, 393281, 0, 0, 393283, 1, 0, 393285, 2, 0, 393289, 0, 0, 393291, 1, 0, 393293, 1, 0, 393295, 1, 0, 393297, 1, 0, 393299, 1, 0, 393301, 1, 0, 393303, 1, 0, 393305, 1, 0, 393307, 1, 0, 393309, 1, 0, 393311, 1, 0, 393313, 1, 0, 393315, 1, 0, 393317, 1, 0, 393319, 1, 0, 393321, 1, 0, 393323, 1, 0, 393325, 1, 0, 393327, 1, 0, 393329, 1, 0, 393331, 1, 0, 393333, 1, 0, 393335, 1, 0, 393337, 1, 0, 393339, 1, 0, 393341, 1, 0, 393343, 1, 0, 393345, 1, 0, 393347, 1, 0, 393349, 1, 0, 393351, 1, 0, 393353, 2, 0, 524286, 1, 0, 458808, 0, 0, 458810, 2, 0, 524335, 0, 0, 524337, 2, 0, 524353, 3, 0, 524355, 4, 0, 524357, 5, 0, 524361, 3, 0, 524363, 4, 0, 524365, 4, 0, 524367, 4, 0, 524369, 4, 0, 524370, 4, 0, 524371, 4, 0, 524372, 4, 0, 524373, 4, 0, 524374, 4, 0, 524375, 4, 0, 524376, 4, 0, 524377, 4, 0, 524379, 4, 0, 524380, 4, 0, 524381, 4, 0, 524382, 4, 0, 524383, 4, 0, 524385, 4, 0, 524386, 4, 0, 524387, 4, 0, 524388, 4, 0, 524389, 4, 0, 524390, 4, 0, 524391, 4, 0, 524392, 4, 0, 524393, 4, 0, 524394, 4, 0, 524395, 4, 0, 524396, 4, 0, 524397, 4, 0, 524398, 4, 0, 524399, 4, 0, 524401, 4, 0, 524402, 4, 0, 524403, 4, 0, 524404, 4, 0, 524405, 4, 0, 524406, 4, 0, 524407, 4, 0, 524408, 4, 0, 524409, 4, 0, 524410, 4, 0, 524411, 4, 0, 524412, 4, 0, 524413, 4, 0, 524414, 4, 0, 524415, 4, 0, 524417, 4, 0, 524419, 4, 0, 524421, 4, 0, 524423, 4, 0, 524425, 5, 0, 655358, 1, 0, 589880, 3, 0, 589882, 5, 0, 589901, 4, 0, 589906, 4, 0, 589907, 4, 0, 589908, 4, 0, 589909, 4, 0, 589910, 4, 0, 589911, 4, 0, 589914, 4, 0, 589915, 4, 0, 589916, 4, 0, 589917, 4, 0, 589919, 4, 0, 589920, 4, 0, 589921, 4, 0, 589922, 4, 0, 589923, 4, 0, 589924, 4, 0, 589925, 4, 0, 589926, 4, 0, 589927, 4, 0, 589928, 4, 0, 589929, 4, 0, 589930, 4, 0, 589931, 4, 0, 589934, 4, 0, 589935, 4, 0, 589936, 4, 0, 589937, 4, 0, 589939, 4, 0, 589940, 4, 0, 589942, 4, 0, 589944, 4, 0, 589945, 4, 0, 589946, 4, 0, 589947, 4, 0, 589948, 4, 0, 589949, 4, 0, 589951, 4, 0, 720894, 1, 0, 655360, 1, 0, 655362, 1, 0, 655364, 1, 0, 655366, 1, 0, 655368, 1, 0, 655370, 1, 0, 655372, 1, 0, 655374, 1, 0, 655376, 1, 0, 655378, 1, 0, 655380, 1, 0, 655382, 1, 0, 655384, 1, 0, 655386, 1, 0, 655388, 1, 0, 655390, 1, 0, 655392, 1, 0, 655394, 1, 0, 655396, 1, 0, 655398, 1, 0, 655400, 1, 0, 655402, 2, 0, 655407, 3, 0, 655409, 5, 0, 655425, 3, 0, 655427, 4, 0, 655429, 5, 0, 655433, 3, 0, 655435, 4, 0, 655439, 4, 0, 655441, 4, 0, 655443, 4, 0, 655444, 4, 0, 655445, 4, 0, 655447, 4, 0, 655448, 4, 0, 655449, 4, 0, 655450, 4, 0, 655451, 4, 0, 655452, 4, 0, 655453, 4, 0, 655455, 4, 0, 655456, 4, 0, 655457, 4, 0, 655458, 4, 0, 655459, 4, 0, 655460, 4, 0, 655461, 4, 0, 655462, 4, 0, 655463, 4, 0, 655467, 4, 0, 655468, 4, 0, 655470, 4, 0, 655471, 4, 0, 655472, 4, 0, 655475, 4, 0, 655476, 4, 0, 655477, 4, 0, 655478, 4, 0, 655480, 4, 0, 655482, 4, 0, 655483, 4, 0, 655484, 4, 0, 655485, 4, 0, 655487, 4, 0, 655489, 4, 0, 655491, 4, 0, 655493, 4, 0, 655495, 4, 0, 655497, 5, 0, 720952, 3, 0, 720954, 5, 0, 720971, 4, 0, 720973, 4, 0, 720978, 4, 0, 720979, 4, 0, 720980, 4, 0, 720981, 4, 0, 720982, 4, 0, 720983, 4, 0, 720984, 4, 0, 720985, 4, 0, 720986, 4, 0, 720987, 4, 0, 720988, 4, 0, 720989, 4, 0, 720990, 4, 0, 720991, 4, 0, 720993, 4, 0, 720994, 4, 0, 720995, 4, 0, 720996, 4, 0, 720997, 4, 0, 720998, 4, 0, 720999, 4, 0, 721000, 4, 0, 721001, 4, 0, 721002, 4, 0, 721003, 4, 0, 721004, 4, 0, 721005, 4, 0, 721006, 4, 0, 721007, 4, 0, 721009, 4, 0, 721010, 4, 0, 721011, 4, 0, 721012, 4, 0, 721013, 4, 0, 721014, 4, 0, 721015, 4, 0, 721016, 4, 0, 721017, 4, 0, 721018, 4, 0, 721019, 4, 0, 721020, 4, 0, 721023, 4, 0, 721031, 4, 0, 851966, 4, 0, 786432, 4, 0, 786434, 4, 0, 786436, 4, 0, 786438, 4, 0, 786440, 4, 0, 786442, 4, 0, 786444, 4, 0, 786445, 4, 0, 786447, 4, 0, 786449, 4, 0, 786451, 4, 0, 786453, 4, 0, 786455, 4, 0, 786457, 4, 0, 786459, 4, 0, 786461, 4, 0, 786463, 4, 0, 786464, 4, 0, 786466, 4, 0, 786468, 4, 0, 786470, 4, 0, 786472, 4, 0, 786474, 5, 0, 786479, 3, 0, 786481, 5, 0, 786497, 3, 0, 786499, 4, 0, 786501, 5, 0, 786505, 3, 0, 786508, 4, 0, 786509, 4, 0, 786510, 4, 0, 786511, 4, 0, 786512, 4, 0, 786513, 4, 0, 786514, 4, 0, 786515, 4, 0, 786516, 4, 0, 786517, 4, 0, 786519, 4, 0, 786520, 4, 0, 786521, 4, 0, 786524, 4, 0, 786525, 4, 0, 786526, 4, 0, 786527, 4, 0, 786528, 4, 0, 786529, 4, 0, 786530, 4, 0, 786531, 4, 0, 786532, 4, 0, 786533, 4, 0, 786534, 4, 0, 786535, 4, 0, 786536, 4, 0, 786537, 4, 0, 786538, 4, 0, 786539, 4, 0, 786540, 4, 0, 786541, 4, 0, 786542, 4, 0, 786543, 4, 0, 786545, 4, 0, 786546, 4, 0, 786548, 4, 0, 786549, 4, 0, 786550, 4, 0, 786551, 4, 0, 786552, 4, 0, 786553, 4, 0, 786554, 4, 0, 786555, 4, 0, 786556, 4, 0, 786557, 4, 0, 786559, 4, 0, 786561, 4, 0, 786563, 4, 0, 786565, 4, 0, 786569, 5, 0, 852024, 3, 0, 852026, 5, 0, 852043, 4, 0, 852045, 4, 0, 852049, 4, 0, 852050, 4, 0, 852051, 4, 0, 852053, 4, 0, 852055, 4, 0, 852056, 4, 0, 852057, 4, 0, 852058, 4, 0, 852059, 4, 0, 852060, 4, 0, 852061, 4, 0, 852062, 4, 0, 852063, 4, 0, 852064, 4, 0, 852066, 4, 0, 852067, 4, 0, 852068, 4, 0, 852069, 4, 0, 852070, 4, 0, 852071, 4, 0, 852072, 4, 0, 852073, 4, 0, 852076, 4, 0, 852077, 4, 0, 852078, 4, 0, 852081, 4, 0, 852082, 4, 0, 852084, 4, 0, 852085, 4, 0, 852086, 4, 0, 852089, 4, 0, 852090, 4, 0, 852091, 4, 0, 852092, 4, 0, 852093, 4, 0, 852095, 4, 0, 852103, 4, 0, 983038, 8, 0, 917504, 8, 0, 917506, 8, 0, 917508, 8, 0, 917510, 8, 0, 917512, 8, 0, 917514, 8, 0, 917516, 8, 0, 917518, 8, 0, 917520, 8, 0, 917522, 8, 0, 917524, 8, 0, 917526, 8, 0, 917528, 8, 0, 917530, 8, 0, 917532, 8, 0, 917534, 8, 0, 917536, 8, 0, 917538, 8, 0, 917540, 8, 0, 917541, 8, 0, 917543, 8, 0, 917544, 8, 0, 917546, 12, 0, 917551, 11, 0, 917553, 12, 0, 917569, 3, 0, 917571, 4, 0, 917573, 5, 0, 917577, 3, 0, 917583, 4, 0, 917584, 4, 0, 917585, 4, 0, 917586, 4, 0, 917590, 4, 0, 917591, 4, 0, 917592, 4, 0, 917593, 4, 0, 917594, 4, 0, 917595, 4, 0, 917596, 4, 0, 917597, 4, 0, 917598, 4, 0, 917599, 4, 0, 917600, 4, 0, 917601, 4, 0, 917602, 4, 0, 917603, 4, 0, 917604, 4, 0, 917605, 4, 0, 917606, 4, 0, 917607, 4, 0, 917608, 4, 0, 917609, 4, 0, 917610, 4, 0, 917611, 4, 0, 917612, 4, 0, 917613, 4, 0, 917614, 4, 0, 917615, 4, 0, 917617, 4, 0, 917618, 4, 0, 917619, 4, 0, 917620, 4, 0, 917621, 4, 0, 917622, 4, 0, 917623, 4, 0, 917624, 4, 0, 917625, 4, 0, 917626, 4, 0, 917627, 4, 0, 917628, 4, 0, 917629, 4, 0, 917630, 4, 0, 917631, 4, 0, 917633, 4, 0, 917635, 4, 0, 917637, 4, 0, 917639, 4, 0, 917641, 5, 0, 983096, 11, 0, 983098, 12, 0, 983115, 4, 0, 983117, 4, 0, 983120, 4, 0, 983121, 4, 0, 983122, 4, 0, 983124, 4, 0, 983125, 4, 0, 983126, 4, 0, 983128, 4, 0, 983129, 4, 0, 983130, 4, 0, 983131, 4, 0, 983132, 4, 0, 983134, 4, 0, 983135, 4, 0, 983136, 4, 0, 983145, 4, 0, 983146, 4, 0, 983147, 4, 0, 983148, 4, 0, 983149, 4, 0, 983150, 4, 0, 1048641, 3, 0, 1048643, 4, 0, 1048645, 5, 0, 1048649, 3, 0, 1048651, 4, 0, 1048653, 4, 0, 1048655, 4, 0, 1048657, 4, 0, 1048658, 4, 0, 1048659, 4, 0, 1048660, 4, 0, 1048662, 4, 0, 1048664, 4, 0, 1048665, 4, 0, 1048666, 4, 0, 1048667, 4, 0, 1048668, 4, 0, 1048669, 4, 0, 1048670, 4, 0, 1048671, 4, 0, 1048672, 4, 0, 1048673, 4, 0, 1048674, 4, 0, 1048675, 4, 0, 1048676, 4, 0, 1048677, 4, 0, 1048678, 4, 0, 1048679, 4, 0, 1048680, 4, 0, 1048681, 4, 0, 1048682, 4, 0, 1048683, 4, 0, 1048684, 4, 0, 1048685, 4, 0, 1048686, 4, 0, 1048687, 4, 0, 1048689, 4, 0, 1048691, 4, 0, 1048693, 4, 0, 1048695, 4, 0, 1048697, 4, 0, 1048699, 4, 0, 1048701, 4, 0, 1048703, 4, 0, 1048705, 4, 0, 1048707, 4, 0, 1048709, 4, 0, 1048711, 4, 0, 1048713, 5, 0 )
+
+[node name="TileSand" type="TileMap" parent="."]
+tile_set = ExtResource( 26 )
+format = 1
+
+[node name="EndLevel" parent="." instance=ExtResource( 12 )]
+position = Vector2( 7724, 343 )
+
+[node name="Pyramid" type="Sprite" parent="."]
+position = Vector2( 7962.49, -263.5 )
+scale = Vector2( 3.2475, 3.2475 )
+texture = ExtResource( 11 )
+
+[node name="Pyramid2" type="Sprite" parent="."]
+position = Vector2( 7962.49, -263.5 )
+scale = Vector2( 3.2475, 3.2475 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1004.53, 244.179 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.25, 0.25 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 1006.53, 245.179 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 1005, 238 )
+texture = ExtResource( 7 )
+
+[node name="Health" parent="." instance=ExtResource( 8 )]
+position = Vector2( 14, 9.00002 )
+
+[node name="TombStone(2)3" type="Sprite" parent="."]
+position = Vector2( 6630.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(2)5" type="Sprite" parent="."]
+position = Vector2( 6814.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(1)" type="Sprite" parent="."]
+position = Vector2( 6483, 358 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(1)3" type="Sprite" parent="."]
+position = Vector2( 6230, 358 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(1)4" type="Sprite" parent="."]
+position = Vector2( 6147, 357 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(1)6" type="Sprite" parent="."]
+position = Vector2( 5987, 365 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(1)8" type="Sprite" parent="."]
+position = Vector2( 5697, 361 )
+texture = ExtResource( 21 )
+flip_h = true
+
+[node name="TombStone(1)7" type="Sprite" parent="."]
+position = Vector2( 5743, 357 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(2)2" type="Sprite" parent="."]
+position = Vector2( 6399.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(1)2" type="Sprite" parent="."]
+position = Vector2( 6563, 362 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(1)5" type="Sprite" parent="."]
+position = Vector2( 6695, 359 )
+texture = ExtResource( 21 )
+
+[node name="TombStone(2)" type="Sprite" parent="."]
+position = Vector2( 6309.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(2)4" type="Sprite" parent="."]
+position = Vector2( 6045.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(2)6" type="Sprite" parent="."]
+position = Vector2( 5885.25, 358.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TombStone(2)9" type="Sprite" parent="."]
+position = Vector2( 5615, 358 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="TreePineBlue3" type="Sprite" parent="."]
+position = Vector2( 6450, 131 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue6" type="Sprite" parent="."]
+position = Vector2( 6106, 130 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue8" type="Sprite" parent="."]
+position = Vector2( 5730, 132 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue10" type="Sprite" parent="."]
+position = Vector2( 5394, 132 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue2" type="Sprite" parent="."]
+position = Vector2( 6757, 131 )
+texture = ExtResource( 13 )
+
+[node name="HouseAlt1" type="Sprite" parent="."]
+position = Vector2( 914.5, 418 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="House5" type="Sprite" parent="."]
+position = Vector2( 662.5, 418 )
+texture = ExtResource( 17 )
+flip_h = true
+
+[node name="HouseAlt2" type="Sprite" parent="."]
+position = Vector2( 488.5, 418 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="House4" type="Sprite" parent="."]
+position = Vector2( 237.5, 418 )
+texture = ExtResource( 17 )
+flip_h = true
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 336, 595 )
+
+[node name="Zombie" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1518, 585 )
+
+[node name="Zombie14" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1397, 585 )
+
+[node name="Zombie13" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1670, 591 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1852, 595 )
+
+[node name="Zombie3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2043, 595 )
+
+[node name="Zombie4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2192, 595 )
+
+[node name="Zombie5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2402, 599 )
+
+[node name="Thorn" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3691, 437 )
+
+[node name="Thorn2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3121, 500 )
+
+[node name="Thorn3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 4366, 372 )
+
+[node name="Zombie6" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5561, 338 )
+
+[node name="Zombie7" parent="." instance=ExtResource( 15 )]
+position = Vector2( 6731, 341 )
+
+[node name="Zombie8" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5338, 345 )
+
+[node name="Zombie9" parent="." instance=ExtResource( 15 )]
+position = Vector2( 6324, 341 )
+
+[node name="Zombie10" parent="." instance=ExtResource( 15 )]
+position = Vector2( 6098, 335 )
+
+[node name="Zombie11" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5722, 345 )
+
+[node name="Zombie12" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5906, 345 )
+
+[node name="TreePineBlue" type="Sprite" parent="."]
+position = Vector2( 6610, 139 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue5" type="Sprite" parent="."]
+position = Vector2( 6282, 143 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue7" type="Sprite" parent="."]
+position = Vector2( 5923, 142 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue9" type="Sprite" parent="."]
+position = Vector2( 5547, 141 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue12" type="Sprite" parent="."]
+position = Vector2( 5219, 140 )
+texture = ExtResource( 13 )
+
+[node name="TreePineBlue4" type="Sprite" parent="."]
+position = Vector2( 6890, 139 )
+texture = ExtResource( 13 )
+
+[node name="TombStone(2)7" type="Sprite" parent="."]
+position = Vector2( 5805.25, 366.811 )
+scale = Vector2( 0.820755, 0.820755 )
+texture = ExtResource( 20 )
+
+[node name="Thorn4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 4390, 372 )
+
+[node name="Stats" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1311, 839 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 6 )]
+visible = false
+
+[node name="Bone(1)" type="Sprite" parent="."]
+position = Vector2( 5604, 477 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)"]
+position = Vector2( 262, 62 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)/Bone(3)2"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)/Bone(3)2/Bone(4)"]
+position = Vector2( -24.8848, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)"]
+position = Vector2( 472, 70 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)/Bone(3)3"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)/Bone(3)3/Bone(4)"]
+position = Vector2( -90.2988, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)/Bone(3)3/Bone(4)"]
+position = Vector2( -2.13086, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)/Bone(3)3/Bone(4)"]
+position = Vector2( 98.1387, 56.8889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(4)" type="Sprite" parent="."]
+position = Vector2( 5937, 493 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(1)2" type="Sprite" parent="."]
+position = Vector2( 5996, 499 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+flip_h = true
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)2"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)2"]
+position = Vector2( 262, 62 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)2/Bone(3)2"]
+position = Vector2( 8.53271, -98.1333 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)2/Bone(3)2/Bone(4)"]
+position = Vector2( -65.4219, 58.311 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)2/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)2"]
+position = Vector2( 380, -22 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)2/Bone(3)3"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)2/Bone(3)3/Bone(4)"]
+position = Vector2( -90.2988, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)2/Bone(3)3/Bone(4)"]
+position = Vector2( -2.13086, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)2/Bone(3)3/Bone(4)"]
+position = Vector2( 98.1387, 56.8889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)2"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(4)2" type="Sprite" parent="."]
+position = Vector2( 6283, 469 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(1)3" type="Sprite" parent="."]
+position = Vector2( 5604, 477 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)3"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)3"]
+position = Vector2( 262, 62 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)3/Bone(3)2"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)3/Bone(3)2/Bone(4)"]
+position = Vector2( -24.8848, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)3/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)3"]
+position = Vector2( 472, 70 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)3/Bone(3)3"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+flip_v = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)3/Bone(3)3/Bone(4)"]
+position = Vector2( -90.2988, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)3/Bone(3)3/Bone(4)"]
+position = Vector2( -2.13086, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)3/Bone(3)3/Bone(4)"]
+position = Vector2( 98.1387, 56.8889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)3"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(4)3" type="Sprite" parent="."]
+position = Vector2( 5937, 493 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(1)4" type="Sprite" parent="."]
+position = Vector2( 5996, 499 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+flip_h = true
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)4"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)4"]
+position = Vector2( 262, 62 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)4/Bone(3)2"]
+position = Vector2( 8.53271, -98.1333 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)4/Bone(3)2/Bone(4)"]
+position = Vector2( -65.4219, 58.311 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)4/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)4"]
+position = Vector2( 380, -22 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+flip_h = true
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)4/Bone(3)3"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)4/Bone(3)3/Bone(4)"]
+position = Vector2( -90.2988, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)4/Bone(3)3/Bone(4)"]
+position = Vector2( -2.13086, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)4/Bone(3)3/Bone(4)"]
+position = Vector2( 98.1387, 56.8889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)4"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Bone(4)4" type="Sprite" parent="."]
+position = Vector2( 6283, 469 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+flip_h = true
+
+[node name="Bone(1)5" type="Sprite" parent="."]
+position = Vector2( 6340, 487 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)5"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)5"]
+position = Vector2( 216, -16 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)5/Bone(3)2"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)5/Bone(3)2/Bone(4)"]
+position = Vector2( -81.7734, -9.24426 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)5/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)5"]
+position = Vector2( 392, -10 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)5/Bone(3)3"]
+position = Vector2( 72.5278, -5.68933 )
+texture = ExtResource( 22 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)5/Bone(3)3/Bone(4)"]
+position = Vector2( -90.2988, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)5/Bone(3)3/Bone(4)"]
+position = Vector2( -2.13086, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)5/Bone(3)3/Bone(4)"]
+position = Vector2( 98.1387, 56.8889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)5"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+
+[node name="Bone(4)5" type="Sprite" parent="."]
+position = Vector2( 6633, 463 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+
+[node name="Bone(1)6" type="Sprite" parent="."]
+position = Vector2( 6723, 509 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+
+[node name="Bone(3)" type="Sprite" parent="Bone(1)6"]
+position = Vector2( 134, 78 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(3)2" type="Sprite" parent="Bone(1)6"]
+position = Vector2( 262, 62 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)6/Bone(3)2"]
+position = Vector2( 8.53271, -98.1333 )
+texture = ExtResource( 22 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)6/Bone(3)2/Bone(4)"]
+position = Vector2( -78.2217, 58.3111 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)6/Bone(3)2/Bone(4)"]
+position = Vector2( 84.6191, -12.0891 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(3)3" type="Sprite" parent="Bone(1)6"]
+position = Vector2( 380, -22 )
+scale = Vector2( 1.40625, 1.40625 )
+texture = ExtResource( 25 )
+
+[node name="Bone(4)" type="Sprite" parent="Bone(1)6/Bone(3)3"]
+position = Vector2( 73.9507, -32.7111 )
+texture = ExtResource( 22 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)6/Bone(3)3/Bone(4)"]
+position = Vector2( -103.099, 94.5778 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)2" type="Sprite" parent="Bone(1)6/Bone(3)3/Bone(4)"]
+position = Vector2( -14.9307, 47.6445 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)3" type="Sprite" parent="Bone(1)6/Bone(3)3/Bone(4)"]
+position = Vector2( 85.3389, 56.889 )
+scale = Vector2( 0.811111, 0.811111 )
+texture = ExtResource( 23 )
+
+[node name="Bone(2)" type="Sprite" parent="Bone(1)6"]
+position = Vector2( 106, 20 )
+texture = ExtResource( 23 )
+
+[node name="Bone(4)6" type="Sprite" parent="."]
+position = Vector2( 7019, 479 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 22 )
+
+[node name="Coin" parent="." instance=ExtResource( 27 )]
+position = Vector2( 1175, 616 )
+
+[node name="Coin2" parent="." instance=ExtResource( 27 )]
+position = Vector2( 1595, 615 )
+
+[node name="Coin3" parent="." instance=ExtResource( 27 )]
+position = Vector2( 2117, 614 )
+
+[node name="Coin4" parent="." instance=ExtResource( 27 )]
+position = Vector2( 3048, 490 )
+
+[node name="Coin5" parent="." instance=ExtResource( 27 )]
+position = Vector2( 3624, 426 )
+
+[node name="Coin6" parent="." instance=ExtResource( 27 )]
+position = Vector2( 4225, 362 )
+
+[node name="Coin7" parent="." instance=ExtResource( 27 )]
+position = Vector2( 4743, 362 )
+
+[node name="Coin8" parent="." instance=ExtResource( 27 )]
+position = Vector2( 5045, 361 )
+
+[node name="Coin9" parent="." instance=ExtResource( 27 )]
+position = Vector2( 5442, 359 )
+
+[node name="Coin10" parent="." instance=ExtResource( 27 )]
+position = Vector2( 5828, 351 )

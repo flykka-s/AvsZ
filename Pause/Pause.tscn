@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Pause/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Redressed-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Pause/Button2.gd" type="Script" id=3]
+[ext_resource path="res://Pause/Button3.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 2 )
+
+[node name="Pause" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 8.0
+margin_bottom = 46.0
+script = ExtResource( 1 )
+
+[node name="BackLay" type="ColorRect" parent="."]
+margin_right = 1279.0
+margin_bottom = 769.0
+color = Color( 0.0117647, 0.0117647, 0.0117647, 0.364706 )
+
+[node name="ColorRect" type="ColorRect" parent="BackLay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -223.0
+margin_top = -290.0
+margin_right = 223.0
+margin_bottom = 290.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="BackLay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -93.0
+margin_right = 130.5
+margin_bottom = -13.0
+custom_fonts/font = SubResource( 1 )
+text = "Continue"
+
+[node name="Button2" type="Button" parent="BackLay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -4.0
+margin_right = 130.5
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 2 )
+text = "Menu"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="BackLay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = 84.0
+margin_right = 130.5
+margin_bottom = 164.0
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="BackLay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -255.0
+margin_right = 160.0
+margin_bottom = -165.0
+custom_fonts/font = SubResource( 4 )
+text = "Pause"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BackLay/Button" to="." method="_on_Button_pressed"]
+[connection signal="button_up" from="BackLay/Button2" to="BackLay/Button2" method="_on_Button2_button_up"]
+[connection signal="pressed" from="BackLay/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="button_up" from="BackLay/Button3" to="BackLay/Button3" method="_on_Button3_button_up"]
+[connection signal="pressed" from="BackLay/Button3" to="." method="_on_Button3_pressed"]

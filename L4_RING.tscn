@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Lato-HeavyItalic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://alien_predator_mask/predatormask__0000_idle_1.png" type="Texture" id=2]
+[ext_resource path="res://L4_RING.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Stay",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "TextInp"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="L4_RING" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1276.0
+margin_bottom = 716.0
+color = Color( 0, 0, 0, 0.647059 )
+
+[node name="Button" type="Button" parent="ColorRect"]
+pause_mode = 2
+margin_left = 998.0
+margin_top = 614.0
+margin_right = 1264.0
+margin_bottom = 702.0
+custom_fonts/font = SubResource( 1 )
+text = "Продолжить..."
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 406.0
+margin_top = 244.0
+margin_right = 1511.0
+margin_bottom = 724.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Это её кольцо! Наверно обранила, 
+когда они её тащли за собой."
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
+position = Vector2( 147, 532 )
+scale = Vector2( 1.64348, 1.64348 )
+frames = SubResource( 3 )
+animation = "Stay"
+
+[node name="Text" type="AnimationPlayer" parent="ColorRect"]
+root_node = NodePath("../..")
+autoplay = "TextInp"
+anims/RESET = SubResource( 4 )
+anims/TextInp = SubResource( 5 )
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]

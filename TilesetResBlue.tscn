@@ -1,0 +1,259 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Tiles/ladder.png" type="Texture" id=1]
+[ext_resource path="res://TilesBlue/Tile (13).png" type="Texture" id=2]
+[ext_resource path="res://TilesBlue/Tile (2).png" type="Texture" id=3]
+[ext_resource path="res://TilesBlue/Tile (3).png" type="Texture" id=4]
+[ext_resource path="res://TilesBlue/Tile (7).png" type="Texture" id=5]
+[ext_resource path="res://TilesBlue/Tile (4).png" type="Texture" id=6]
+[ext_resource path="res://TilesBlue/Tile (16).png" type="Texture" id=7]
+[ext_resource path="res://TilesBlue/Tile (1).png" type="Texture" id=8]
+[ext_resource path="res://TilesBlue/Tile (9).png" type="Texture" id=9]
+[ext_resource path="res://TilesBlue/Tile (12).png" type="Texture" id=10]
+[ext_resource path="res://TilesBlue/Tile (10).png" type="Texture" id=11]
+[ext_resource path="res://TilesBlue/Tile (11).png" type="Texture" id=12]
+[ext_resource path="res://TilesBlue/Tile (8).png" type="Texture" id=13]
+[ext_resource path="res://TilesBlue/Tile (14).png" type="Texture" id=14]
+[ext_resource path="res://TilesBlue/Tile (5).png" type="Texture" id=15]
+[ext_resource path="res://TilesBlue/Tile (15).png" type="Texture" id=16]
+[ext_resource path="res://TilesBlue/Tile (6).png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.9208, 64.5259 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.5, 3.5 )
+
+[node name="TilesetRes" type="Node2D"]
+
+[node name="Tile001" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile001"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile001/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile002" type="Sprite" parent="."]
+position = Vector2( 141.408, 1.58886 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile002"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile002/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile003" type="Sprite" parent="."]
+position = Vector2( 318.298, -0.216133 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile003"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile003/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile004" type="Sprite" parent="."]
+position = Vector2( 478.943, -2.02113 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile004"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile004/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile005" type="Sprite" parent="."]
+position = Vector2( 638.686, -1.11863 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile005"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile005/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile006" type="Sprite" parent="."]
+position = Vector2( 831.821, -7.43613 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile006"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile006/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile007" type="Sprite" parent="."]
+position = Vector2( 5.13074, 165.844 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile007"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile007/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile008" type="Sprite" parent="."]
+position = Vector2( 150.433, 170.356 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile008"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile008/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile009" type="Sprite" parent="."]
+position = Vector2( 311.078, 170.356 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile009"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile009/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile010" type="Sprite" parent="."]
+position = Vector2( 482.553, 168.551 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile010"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile010/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile011" type="Sprite" parent="."]
+position = Vector2( 645.003, 168.551 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile011"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile011/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile012" type="Sprite" parent="."]
+position = Vector2( 828.211, 165.844 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile012"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile012/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile013" type="Sprite" parent="."]
+position = Vector2( 4.94189, 364.182 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile013"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile013/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile014" type="Sprite" parent="."]
+position = Vector2( 178, 360 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile014"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile014/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile015" type="Sprite" parent="."]
+position = Vector2( 352.864, 364.182 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile015"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile015/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile016" type="Sprite" parent="."]
+position = Vector2( 533.474, 355.318 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile016"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile016/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ladder" type="Sprite" parent="."]
+position = Vector2( 722, 410 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ladder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 7, -6 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 7, 32 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 5, 70 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 7, 104 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 6, -40 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 6, -71 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ladder/StaticBody2D"]
+position = Vector2( 3, -110 )
+shape = SubResource( 2 )
+one_way_collision = true

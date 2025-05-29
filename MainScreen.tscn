@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://BG Layers/bg1.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Redressed-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Start/PlayButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Start/QuitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BG Layers/bg2.png" type="Texture" id=5]
+[ext_resource path="res://BG Layers/bg3.png" type="Texture" id=6]
+[ext_resource path="res://SelectLevel.gd" type="Script" id=7]
+[ext_resource path="res://QuitReal.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 31
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 31
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 31
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg1" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg2" type="Sprite" parent="Bg1"]
+position = Vector2( 641, 309.5 )
+scale = Vector2( 0.635, 0.709536 )
+texture = ExtResource( 5 )
+
+[node name="Bg3" type="Sprite" parent="Bg1/Bg2"]
+position = Vector2( -7.87402, 9.16089 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 324.0
+margin_top = -14.0
+margin_right = 970.0
+margin_bottom = 194.0
+custom_fonts/font = SubResource( 1 )
+text = "Aliens VS Zombies"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="." instance=ExtResource( 3 )]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = 93.5
+margin_right = 174.0
+margin_bottom = 154.5
+custom_fonts/font = SubResource( 2 )
+text = "New Game"
+
+[node name="LevelsButton" type="Button" parent="."]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = 159.5
+margin_right = 174.0
+margin_bottom = 220.5
+custom_fonts/font = SubResource( 4 )
+text = "Levels"
+script = ExtResource( 7 )
+
+[node name="QuitButton" parent="." instance=ExtResource( 4 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = 226.5
+margin_right = 174.0
+margin_bottom = 287.5
+custom_fonts/font = SubResource( 3 )
+
+[node name="QuitReal" type="Button" parent="."]
+pause_mode = 2
+margin_left = 466.0
+margin_top = 586.0
+margin_right = 814.0
+margin_bottom = 647.0
+custom_fonts/font = SubResource( 5 )
+text = "Quit"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="LevelsButton" to="LevelsButton" method="_on_Button_button_up"]
+[connection signal="button_up" from="QuitReal" to="QuitReal" method="_on_QuitReal_button_up"]

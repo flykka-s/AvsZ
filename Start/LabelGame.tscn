@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Label" type="Label"]
+margin_left = 488.0
+margin_top = 422.0
+margin_right = 802.0
+margin_bottom = 581.0
+text = "Game
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

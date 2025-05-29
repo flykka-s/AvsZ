@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://MenuButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Start/LabelGame.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Redressed-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://BG Layers/bg2.png" type="Texture" id=4]
+[ext_resource path="res://BG Layers/bg3.png" type="Texture" id=5]
+[ext_resource path="res://BG Layers/bg1.png" type="Texture" id=6]
+[ext_resource path="res://ResButton9.gd" type="Script" id=7]
+[ext_resource path="res://MenuButton.gd" type="Script" id=8]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="DeadScreen3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg1" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg2" type="Sprite" parent="Bg1"]
+position = Vector2( 641, 309.5 )
+scale = Vector2( 0.635, 0.709536 )
+texture = ExtResource( 4 )
+
+[node name="Bg3" type="Sprite" parent="Bg1/Bg2"]
+position = Vector2( -7.87402, 9.16089 )
+texture = ExtResource( 5 )
+
+[node name="Label" parent="." instance=ExtResource( 2 )]
+margin_left = 422.0
+margin_top = -13.0
+margin_right = 891.0
+margin_bottom = 146.0
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "YOU DEAD"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 518.0
+margin_right = 830.0
+margin_bottom = 585.0
+custom_fonts/font = SubResource( 5 )
+text = "Restart"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" parent="." instance=ExtResource( 1 )]
+custom_fonts/font = SubResource( 4 )
+script = ExtResource( 8 )
+
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
+[connection signal="button_up" from="MenuButton" to="MenuButton" method="_on_button_up"]

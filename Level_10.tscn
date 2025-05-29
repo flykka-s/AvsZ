@@ -1,0 +1,161 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Healt/Health.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sand/BG.png" type="Texture" id=3]
+[ext_resource path="res://Colll.tres" type="TileSet" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pause/Pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TileSand.tres" type="TileSet" id=7]
+[ext_resource path="res://Level_10.gd" type="Script" id=8]
+[ext_resource path="res://Uldran.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Dialog1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Dialog2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Dialog3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Dialog4.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Dialog5.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Bix.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/al.png" type="Texture" id=16]
+[ext_resource path="res://Objects/jail.png" type="Texture" id=17]
+[ext_resource path="res://Objects/jail_open.png" type="Texture" id=18]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Thorns/Thorn_x4_left.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Thorns/Thorn_x6_left.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Jail.gd" type="Script" id=22]
+[ext_resource path="res://victory1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://victory2.tscn" type="PackedScene" id=24]
+
+[node name="Level_10" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 1.00102, 0.996033 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( -917506, 0, 0, -983040, 1, 0, -983038, 1, 0, -983036, 1, 0, -983034, 1, 0, -983032, 1, 0, -983030, 1, 0, -983028, 1, 0, -983026, 1, 0, -983024, 1, 0, -983022, 1, 0, -983020, 1, 0, -983018, 1, 0, -983016, 1, 0, -983014, 1, 0, -983012, 1, 0, -983010, 1, 0, -983008, 1, 0, -983006, 1, 0, -983004, 1, 0, -983002, 1, 0, -983000, 1, 0, -982998, 1, 0, -982996, 1, 0, -982994, 1, 0, -982992, 1, 0, -982990, 2, 0, -851970, 0, 0, -786434, 0, 0, -851968, 8, 0, -851967, 8, 0, -851966, 8, 0, -851965, 8, 0, -851964, 8, 0, -851963, 8, 0, -851962, 8, 0, -851961, 8, 0, -851960, 8, 0, -851959, 8, 0, -851958, 8, 0, -851956, 8, 0, -851955, 8, 0, -851954, 8, 0, -851953, 8, 0, -851952, 8, 0, -851951, 8, 0, -851950, 8, 0, -851949, 8, 0, -851948, 8, 0, -851947, 8, 0, -851946, 8, 0, -851945, 8, 0, -851944, 8, 0, -851943, 8, 0, -851942, 8, 0, -851941, 8, 0, -851940, 8, 0, -851939, 8, 0, -851938, 8, 0, -851937, 8, 0, -851936, 8, 0, -851935, 8, 0, -851933, 8, 0, -851932, 8, 0, -851931, 8, 0, -851930, 8, 0, -851929, 8, 0, -851928, 8, 0, -851927, 8, 0, -851926, 8, 0, -851925, 8, 0, -851924, 8, 0, -851922, 8, 0, -851920, 1610612745, 0, -851918, 5, 0, -720898, 0, 0, -655362, 0, 0, -720848, 3, 0, -720846, 5, 0, -589826, 0, 0, -655312, 3, 0, -524290, 0, 0, -589774, 5, 0, -458754, 0, 0, -524240, 3, 0, -393218, 0, 0, -458702, 5, 0, -327682, 0, 0, -393168, 3, 0, -327630, 5, 0, -196610, 0, 0, -262096, 3, 0, -131074, 0, 0, -196558, 5, 0, -65538, 0, 0, -131024, 3, 0, -2, 0, 0, -65486, 5, 0, 65534, 0, 0, 48, 3, 0, 131070, 0, 0, 65586, 5, 0, 196606, 0, 0, 131120, 3, 0, 262142, 0, 0, 196658, 5, 0, 327678, 0, 0, 262192, 3, 0, 393214, 0, 0, 327730, 5, 0, 458750, 0, 0, 393264, 3, 0, 458802, 5, 0, 589822, 0, 0, 524336, 3, 0, 655358, 0, 0, 589874, 5, 0, 720894, 0, 0, 655408, 3, 0, 655410, 5, 0, 786430, 0, 0, 851966, 0, 0, 786432, 1, 0, 786434, 1, 0, 786436, 1, 0, 786438, 1, 0, 786440, 1, 0, 786442, 1, 0, 786444, 1, 0, 786446, 1, 0, 786448, 1, 0, 786450, 1, 0, 786452, 1, 0, 786454, 1, 0, 786456, 1, 0, 786458, 1, 0, 786460, 1, 0, 786462, 1, 0, 786464, 1, 0, 786466, 1, 0, 786468, 1, 0, 786470, 1, 0, 786472, 1, 0, 786474, 1, 0, 786476, 1, 0, 786478, 1, 0, 786480, 1, 0, 786482, 1, 0, 786484, 1, 0, 786485, 1, 0, 786487, 1, 0, 786489, 1, 0, 786491, 1, 0, 786493, 1, 0, 786495, 1, 0, 786497, 1, 0, 786499, 1, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 917539, 4, 0, 917540, 4, 0, 917541, 4, 0, 917542, 4, 0, 917543, 4, 0, 917544, 4, 0, 917545, 4, 0, 917546, 4, 0, 917547, 4, 0, 917548, 4, 0, 917549, 4, 0, 917550, 4, 0, 917551, 4, 0, 917552, 4, 0, 917553, 4, 0, 917554, 4, 0, 917556, 4, 0, 917558, 4, 0, 917559, 4, 0, 917561, 4, 0, 917562, 4, 0, 983046, 4, 0, 983047, 4, 0, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983067, 4, 0, 983068, 4, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 641, 239 )
+texture = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 6 )]
+visible = false
+
+[node name="Health" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14, 9 )
+
+[node name="Stats" parent="." instance=ExtResource( 2 )]
+position = Vector2( 69.9999, 888 )
+scale = Vector2( 31.8906, 15.8281 )
+
+[node name="Al" type="Sprite" parent="."]
+position = Vector2( 2881, 701 )
+scale = Vector2( 0.214069, 0.214069 )
+texture = ExtResource( 16 )
+
+[node name="JailOpen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2920, 695 )
+scale = Vector2( 0.282779, 0.282779 )
+texture = ExtResource( 18 )
+
+[node name="Jail" type="Sprite" parent="."]
+position = Vector2( 2880, 696 )
+scale = Vector2( 0.282226, 0.282226 )
+texture = ExtResource( 17 )
+script = ExtResource( 22 )
+
+[node name="JailOpen" type="Sprite" parent="Jail"]
+visible = false
+position = Vector2( 141.73, -3.54321 )
+scale = Vector2( 1.00196, 1.00196 )
+texture = ExtResource( 18 )
+
+[node name="Bix" parent="." instance=ExtResource( 15 )]
+position = Vector2( -12, 645 )
+
+[node name="Bix2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 260, 504 )
+
+[node name="Bix10" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2812, 504 )
+
+[node name="Bix3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 630, 414 )
+
+[node name="Bix4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1015, 409 )
+
+[node name="Bix5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1335, 407 )
+
+[node name="Bix6" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1744, 400 )
+
+[node name="Bix7" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2155, 401 )
+
+[node name="Bix8" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2483, 402 )
+
+[node name="Bix9" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3090, 647 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 25, 580 )
+
+[node name="Thorn" parent="." instance=ExtResource( 20 )]
+position = Vector2( 748, 748 )
+
+[node name="Thorn2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1124, 748 )
+
+[node name="Thorn4" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1948, 748 )
+
+[node name="Thorn3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 1536, 748 )
+
+[node name="Uldran" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2344, 646 )
+
+[node name="Key" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2497, -951 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Dialog1" parent="CanvasLayer2" instance=ExtResource( 10 )]
+visible = false
+
+[node name="Dialog2" parent="CanvasLayer2" instance=ExtResource( 11 )]
+visible = false
+
+[node name="Dialog3" parent="CanvasLayer2" instance=ExtResource( 12 )]
+visible = false
+
+[node name="Dialog4" parent="CanvasLayer2" instance=ExtResource( 13 )]
+visible = false
+
+[node name="Dialog5" parent="CanvasLayer2" instance=ExtResource( 14 )]
+visible = false
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="victory1" parent="CanvasLayer3" instance=ExtResource( 23 )]
+visible = false
+
+[node name="victory2" parent="CanvasLayer3" instance=ExtResource( 24 )]
+visible = false
